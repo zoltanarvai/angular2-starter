@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+    <span class="navbar-brand">AriadneWeb</span>
+    <ul class="nav navbar-nav">
+        <li><a [routerLink]="['./home']">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Issues <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['./issues']">Issues with Syncfusion</a></li>
+            <li><a [routerLink]="['./issues2']">Issues with Bootstrap</a></li>
+          </ul>
+        </li>
+          <li><a [routerLink]="['./dynamic-form']">Dynamic Form</a></li>
+    </ul>
+    <!--<logout class="navbar-right" style="margin-right: 10px" (onLogout)="logout()"></logout>-->
+    <my-logout (onLogout)="logout($event)"></my-logout>
+</nav>
+
+<router-outlet></router-outlet>

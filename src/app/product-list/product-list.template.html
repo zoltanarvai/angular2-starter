@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [ngClass]="{success: selectedProduct == product}" (click)="selectProduct(product)">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.price | currency}}</td>
+        </tr>
+    </tbody>
+</table>
